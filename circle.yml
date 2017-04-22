@@ -17,4 +17,4 @@ deployment:
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
       - docker push 7imbrook/life:count
-      - docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock -e DOCKER_HOST dockercloud/client 7imbrook/aws
+      - docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock -e DOCKER_HOST -e DOCKER_USER -e DOCKER_PASS dockercloud/client 7imbrook/aws
