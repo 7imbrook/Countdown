@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  web:
+    image: '7imbrook/life:count'
+    deploy:
+      labels:
+        - "traefik.backend=countdown"
+        - "traefik.frontend.rule=Host:daysuntilsamandmichaelaredonewith.school"
+        - "traefik.port=80"
+        - "traefik.enable=true"
+    networks:
+      - external
+
+networks:
+  external:
+    external: true

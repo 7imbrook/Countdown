@@ -1,3 +1,8 @@
+body {
+  background-image: url('bg.jpg');
+  background-size: cover;
+}
+
 eager-countdown-app, eager-countdown-app * {
   box-sizing: content-box !important;
 }
